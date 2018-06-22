@@ -17,6 +17,16 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
 
+
+  config_action_mailer.smtp_settings = {
+    :address              =>  'smtp.sendgrid.net',
+    :port                 =>  '587',
+    :authentication       =>  :plain,
+    :user_name            =>  'app100499713@heroku.com',
+    :password             =>  'fffsxovb8812',
+    :domain               =>  'heroku.com',
+    :enable_starttls_auto  =>  true
+  }
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
