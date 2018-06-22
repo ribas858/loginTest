@@ -18,7 +18,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
 
-  config_action_mailer.smtp_settings = {
+  config.action_mailer.smtp_settings = {
     :address              =>  'smtp.sendgrid.net',
     :port                 =>  '587',
     :authentication       =>  :plain,
